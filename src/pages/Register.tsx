@@ -47,7 +47,7 @@ export const Register = () => {
         <Input type="text" value={formData.name} name='name' onChange={onChange}>Nombre</Input>
         <Input type="email" value={formData.email} name='email' onChange={onChange}>Correo</Input>
         <Input type="password" value={formData.password} name='password' onChange={onChange}>Password</Input>
-        <p>Debe tener al menos 6 caracteres</p>
+        <p className='text-green-200 text-sm italic'>Debe tener al menos 6 caracteres</p>
         <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
           <Button text='Registrarse' onClick={onSubmit}></Button>
           <Button text='Borrar' variant='outlined' onClick={resetForm}></Button>
