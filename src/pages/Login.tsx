@@ -3,15 +3,16 @@
 // url: https://noderestserver-production-241a.up.railway.app/api/v1/auth/login
 
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { FormEvent, useContext} from 'react';
 import { Input } from '../components/atoms/Input/Input.component';
 import { Button } from '../components/atoms/Button/Button.component';
 import { NavButton } from '../components/atoms/Button/NavButton.component';
 import { CardLayout } from '../components/atoms/CardWeather/CardLayout.component';
+import { useForm } from '../hooks/useForm.hook';
+import { AppContext } from '../context/App.context';
 
 
-
-export interface LoginPost {
+export interface LoginResponse {
   user:  User;
   token: string;
 }
@@ -34,31 +35,36 @@ interface FormLogIn{
 const initialFormState: FormLogIn ={email: '', password: ''}
 
 export const Login = () => {
-  const [{email, password}, setFormState] = useState<FormLogIn>(initialFormState);
+  const {setUser, setToken} = useContext(AppContext);
+  const {onChange, formData} = useForm<FormLogIn>(initialFormState);
   const navigate = useNavigate();
-
-  const requestLog = () =>{
-    var requestOptions = {
-      method: 'POST',
-      body: JSON.stringify({email, password}),
-    };
-    
   
-    fetch("https://noderestserver-production-241a.up.railway.app/api/v1/auth/login", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+  const onSubmit = async (e?: FormEvent) =>{
+    e?.preventDefault();
+    try {
+      const response = await fetch('https://noderestserver-production-241a.up.railway.app/api/v1/auth/login', {
+        method: 'POST', 
+        headers:{
+          'Content-Type': 'application/json; chatset=UTF-8',
+        },
+        body: JSON.stringify(formData),
+      });
+      const dataBuffer: LoginResponse = await response.json();
+      setToken(dataBuffer.token);
+      setUser(dataBuffer.user);
+    } catch (error){
+      
+    }
   }
-
 
   return (
     <div className='flex w-screen h-screen justify-center items-center bg-gradient-to-b from-emerald-600 to-teal-950 '>
       <CardLayout>
       <h1 className='text-2xl font-extrabold tracking-widest text-center text-green-200 font-serif'>Login</h1>
-          <Input type="email" value={email} onChange={({target}) => setFormState((prev) => ({...prev, email: target.value}))}>Correo</Input>
-          <Input type="password" value={password} onChange={({target}) => setFormState((prev) => ({...prev, password: target.value}))}>Password</Input>
+          <Input type="email" name='email' value={formData.email} onChange={onChange}>Correo</Input>
+          <Input type="password" name='password' value={formData.password} onChange={onChange}>Password</Input>
           <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
-            <Button text='LogIn' onClick={requestLog}></Button>
+            <Button text='LogIn' onClick={onSubmit}></Button>
           </div>
           <div>
             <p className='text-green-200'>¿Aún no está registrado?</p>

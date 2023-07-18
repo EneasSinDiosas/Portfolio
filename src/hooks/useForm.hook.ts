@@ -15,8 +15,8 @@ export const useForm = <T> (initialData: T) => {
     }
 
     return{
-        resetForm,
         formData,
         onChange,
+        resetForm,
     }
 }

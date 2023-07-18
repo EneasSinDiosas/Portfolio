@@ -7,7 +7,7 @@ interface CardLayoutProps{
 export const CardLayout: FC<CardLayoutProps> = ({children}) =>{
 
     return (
-            <div className=' flex px-4 py-4 flex-col justify-center items-center rounded-3xl w-5/6 shadow-xl bg-teal-500 bg-opacity-60'>
+            <div className=' flex px-4 py-4 flex-col justify-center items-center rounded-3xl w-5/6 shadow-xl bg-teal-50 bg-opacity-10'>
                 {children}
             </div>
     )
