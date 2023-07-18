@@ -5,6 +5,8 @@ import { CardLayout } from '../components/atoms/CardWeather/CardLayout.component
 import { CardDay } from '../components/atoms/CardWeather/CardDay.component';
 import { Input } from '../components/atoms/Input/Input.component';
 import { Button } from '../components/atoms/Button/Button.component';
+import { useNavigate } from 'react-router-dom';
+import { NavButton } from '../components/atoms/Button/NavButton.component';
 
 
 export interface Weather {
@@ -166,9 +168,10 @@ export const Weather5days = () => {
   
     const [location, setLocation] = useState<string>('Cáceres')
     const {data, fetchData} = useFetch<Weather>({url: `https://api.weatherapi.com/v1/forecast.json?key=d2a0aa31e609406ca8382121231307&q=${location}&days=5&aqi=no&alerts=no&lang=es`})
+    const navigate = useNavigate();
   
     return (
-      <div className='h-screen w-screen flex flex-col justify-center items-center bg-blue-800'>
+      <div className='h-screen w-screen flex flex-col justify-center items-center bg-gradient-to-b from-emerald-600 to-teal-950'>
         <CardLayout>
           <h1 className='text-6xl antialiased font-semibold'>{data?.location.name}</h1>
           <h2 className='text-lg antialiased font-semibold'>{data?.location.country}</h2>
@@ -181,6 +184,7 @@ export const Weather5days = () => {
               <Input value={location} onChange={(e) => setLocation(e.target.value)}>Ciudad y país</Input>
               <Button onClick={fetchData}>Buscar</Button>
             </div>
+            <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out text-indigo-100 bg-green-600 shadow-lg hover:bg-orange-300 hover:bg-opacity-80 hover:text-yellow-700 hover:shadow-lg hover:scale-90 ' onClick={() => navigate('/')} />
         </CardLayout>
       </div>
     )
