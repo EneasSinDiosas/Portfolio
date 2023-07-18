@@ -20,8 +20,8 @@ interface AppContextI {
 export const AppContext = React.createContext({} as AppContextI);
 
 export const Provider = ({children}: any) => {
-    const [token, setToken] = useState<string>('');
-    const [user, setUser] = useState<User | null>(null);
+    const [token, setToken] = useState<string>(localStorage.getItem('token') || '');
+    const [user, setUser] = useState<User | null>(JSON.parse(localStorage.getItem('user') || '{}'));
 
     const values = {
         token,

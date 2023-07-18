@@ -49,9 +49,13 @@ export const Login = () => {
         },
         body: JSON.stringify(formData),
       });
-      const dataBuffer: LoginResponse = await response.json();
-      setToken(dataBuffer.token);
-      setUser(dataBuffer.user);
+      const data: LoginResponse = await response.json();
+      if(!!data.token){
+        setToken(data.token);
+        setUser(data.user);
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('user', JSON.stringify(data.user))
+      }
     } catch (error){
       
     }
