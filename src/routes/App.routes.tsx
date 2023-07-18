@@ -4,6 +4,7 @@ import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { Contactme } from "../pages/Contactme";
 import { PageNotFound } from "../pages/PageNotFound";
+import { Weather5days } from "../pages/Wheather5days";
 
 
 //<Route path="*" element={<NotFound/>}/>
@@ -14,6 +15,7 @@ export const AppRoutes = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/contactme" element={<Contactme/>}/>
+            <Route path="/weather5days" element={<Weather5days/>}/>
             <Route path="*" element={<PageNotFound/>}/>
         </Routes>
     )
