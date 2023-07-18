@@ -1,5 +1,5 @@
 import {FC} from "react";
-import { Forecastday } from '../../../pages/Wheather5days';
+import { Forecastday } from '../../../pages/Wheather5days.page';
 
 
 interface CardDayProps{

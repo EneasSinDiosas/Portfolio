@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-600 to-teal-950" >
-      <nav className="w-screen h-fit text-green-200 text-xl p-3 flex flex-row">
+      <nav className="w-screen h-fit text-green-200 text-xl p-3 flex flex-row bg-neutral-100 bg-opacity-5">
         <NavButton text='Login' onClick={() => navigate('/login')} />
         <NavButton text='Registro' onClick={() => navigate('/register')} />
         <NavButton text='Contact me' onClick={() => navigate('/contactme')} />
@@ -20,8 +20,8 @@ const App = () => {
           <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={linkImage} />
           <Abutton href="https://github.com/EneasSinDiosas" src={linkImageGit} />
       </nav>
-      <div className='w-5/6 flex flex-col m-2 p-2  '>
-      <div className="grid grid-cols-3">
+      <div className='w-5/6 flex flex-col m-4 p-2  '>
+      <div className="grid grid-cols-3 m-4">
         <header className=" w-5/6 m-2 grid grid-cols-3 px-5 py-3 col-span-2">
           <img src={linkImageProfile} alt="profilePhoto" className="rounded-2xl mr-6 my-1.5 shadow-lg content-start col-start-1 col-end-1"></img>
           <h1 className="text-green-200 text-3xl p-1.5 pt-8 font-semibold col-start-2 col-end-3 content-center text-center subpixel-antialiased tracking-wider">

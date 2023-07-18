@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import App from '../App';
-import { Login } from "../pages/Login";
-import { Register } from "../pages/Register";
-import { Contactme } from "../pages/Contactme";
-import { PageNotFound } from "../pages/PageNotFound";
-import { Weather5days } from "../pages/Wheather5days";
+import { Login } from "../pages/Login.page";
+import { Register } from "../pages/Register.page";
+import { Contactme } from "../pages/Contactme.page";
+import { PageNotFound } from "../pages/PageNotFound.page";
+import { Weather5days } from "../pages/Wheather5days.page";
 
 
 //<Route path="*" element={<NotFound/>}/>
