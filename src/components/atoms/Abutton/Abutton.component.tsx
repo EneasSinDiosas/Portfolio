@@ -9,7 +9,7 @@ interface AbuttonProps {
 export const Abutton: FC<AbuttonProps> = ({ href, src, target = '_blank'}) => {
     return (
         <a href={href} rel="" target={target}>
-            <img src={src} rel="" />
+            <img src={src} rel=""  className="hover:scale-95"/>
         </a>
     )
 }

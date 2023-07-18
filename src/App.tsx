@@ -13,10 +13,10 @@ const App = () => {
   return (
     <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-600 to-teal-950" >
       <nav className="w-screen h-fit text-green-200 text-xl p-3 flex flex-row bg-neutral-100 bg-opacity-5">
-        <NavButton text='Login' onClick={() => navigate('/login')} />
-        <NavButton text='Registro' onClick={() => navigate('/register')} />
-        <NavButton text='Contact me' onClick={() => navigate('/contactme')} />
-        <NavButton text='Weather' onClick={() => navigate('/weather5days')} />
+        <NavButton text='Login' className='hover:scale-95' onClick={() => navigate('/login')} />
+        <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />
+        <NavButton text='Contact me' className='hover:scale-95' onClick={() => navigate('/contactme')} />
+        <NavButton text='Weather' className='hover:scale-95' onClick={() => navigate('/weather5days')} />
           <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={linkImage} />
           <Abutton href="https://github.com/EneasSinDiosas" src={linkImageGit} />
       </nav>

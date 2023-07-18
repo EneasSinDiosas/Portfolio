@@ -5,6 +5,7 @@ import { useForm } from "../hooks/useForm.hook";
 import { NavButton } from '../components/atoms/Button/NavButton.component';
 import { CardLayout } from '../components/atoms/CardWeather/CardLayout.component';
 import { FormEvent } from 'react';
+import { User } from './Login.page';
 
 
 export interface RegisterForm {
@@ -31,8 +32,8 @@ export const Register = () => {
         },
         body: JSON.stringify(formData),
       });
-      const data = await response.json();
-      if(!data?.errors){
+      const data: User = await response.json();
+      if(!!data.uid){
         navigate('/login')
       }
     } catch (error){
