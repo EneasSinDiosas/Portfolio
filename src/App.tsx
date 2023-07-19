@@ -2,12 +2,17 @@ import { useNavigate } from 'react-router-dom';
 import { Abutton } from "./components/atoms/Abutton/Abutton.component"
 import linkImageProfile from './assets/images/profilePhoto.jpg'
 import linkedInLight from './assets/images/linkedinLightMode.svg';
+import linkedIndark from './assets/images/linkedinDarkMode.svg'
 import githubLight from './assets/images/githubLightMode.svg';
+import githubDark from './assets/images/github.png'
 import { NavButton } from './components/atoms/Button/NavButton.component.tsx';
 import { ButtonTheme } from './components/atoms/Button/ButtonTheme.component.tsx';
+import { AppContext } from './context/App.context.tsx';
+import { useContext } from 'react';
 //colorMode === 'light' ?  :
 
 const App = () => {
+  const {colorTheme} = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -18,8 +23,8 @@ const App = () => {
         <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />
         <NavButton text='Contact me' className='hover:scale-95' onClick={() => navigate('/contactme')} />
         <NavButton text='Weather' className='hover:scale-95' onClick={() => navigate('/weather5days')} />
-          <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={linkedInLight} />
-          <Abutton href="https://github.com/EneasSinDiosas" src={githubLight} />
+          <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={colorTheme === 'dark' ? linkedIndark : linkedInLight} />
+          <Abutton href="https://github.com/EneasSinDiosas" src={colorTheme === 'dark' ? githubDark : githubLight} />
         <ButtonTheme>light/dark</ButtonTheme>
       </nav>
       <div className='w-5/6 flex flex-col m-4 p-2  '>

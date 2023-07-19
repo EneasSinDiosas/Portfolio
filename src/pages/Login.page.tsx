@@ -63,7 +63,7 @@ export const Login = () => {
   }
 
   return (
-    <div className='flex w-screen h-screen justify-center items-center bg-gradient-to-b from-emerald-800  to-teal-950 '>
+    <div className='flex w-screen h-screen justify-center items-center bg-gradient-to-b from-emerald-800  to-teal-950 ' id='dark'>
       <CardLayout>
       <h1 className='text-2xl font-extrabold tracking-widest text-center text-green-200 font-serif'>Sign in</h1>
           <Input type="email" name='email' value={formData.email} onChange={onChange}>Correo</Input>
