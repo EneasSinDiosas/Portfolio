@@ -42,9 +42,9 @@ export const Register = () => {
   }
 
   return (
-    <div className='flex w-screen h-screen justify-center items-center bg-gradient-to-b from-emerald-600 to-teal-950 '>
+    <div className='flex w-screen h-screen justify-center items-center bg-gradient-to-b from-emerald-800  to-teal-950'>
       <CardLayout>
-        <h1 className='text-2xl font-extrabold tracking-widest text-center text-green-200'>Registro</h1>
+        <h1 className='text-2xl font-extrabold tracking-widest text-center text-green-200'>Sing up</h1>
         <Input type="text" value={formData.name} name='name' onChange={onChange}>Nombre</Input>
         <Input type="email" value={formData.email} name='email' onChange={onChange}>Correo</Input>
         <Input type="password" value={formData.password} name='password' onChange={onChange}>Password</Input>

@@ -11,7 +11,7 @@ const App = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-600 to-teal-950" >
+    <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-800  to-teal-950" >
       <nav className="w-screen h-fit text-green-200 text-xl p-3 flex flex-row bg-neutral-100 bg-opacity-5">
         <NavButton text='Login' className='hover:scale-95' onClick={() => navigate('/login')} />
         <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />

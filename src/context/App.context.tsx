@@ -1,25 +1,25 @@
-import React from "react";
 import { useState } from 'react';
+import { createContext } from "react";
 
 export interface User {
-    name:   string;
-    email:  string;
-    role:   string;
+    name: string;
+    email: string;
+    role: string;
     status: boolean;
     google: boolean;
-    uid:    string;
-  }
+    uid: string;
+}
 
 interface AppContextI {
     token: string,
     user: User | null,
     setToken: (value: string) => void,
-    setUser: (value: User) => void,
+    setUser: (value: User | null) => void,
 }
 
-export const AppContext = React.createContext({} as AppContextI);
+export const AppContext = createContext({} as AppContextI);
 
-export const Provider = ({children}: any) => {
+export const Provider = ({ children }: any) => {
     const [token, setToken] = useState<string>(localStorage.getItem('token') || '');
     const [user, setUser] = useState<User | null>(JSON.parse(localStorage.getItem('user') || '{}'));
 
@@ -31,6 +31,6 @@ export const Provider = ({children}: any) => {
     }
 
     return (<AppContext.Provider value={values}>{children}</AppContext.Provider>)
-    
+
 }
 

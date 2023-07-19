@@ -7,6 +7,7 @@ import { Input } from '../components/atoms/Input/Input.component';
 import { Button } from '../components/atoms/Button/Button.component';
 import { useNavigate } from 'react-router-dom';
 import { NavButton } from '../components/atoms/Button/NavButton.component';
+import { Logout } from '../components/atoms/Button/Logout.component';
 
 
 export interface Weather {
@@ -171,13 +172,13 @@ export const Weather5days = () => {
     const navigate = useNavigate();
   
     return (
-      <div className='h-screen w-screen flex flex-col justify-center items-center bg-gradient-to-b from-emerald-600 to-teal-950'>
+      <div className='h-screen w-screen flex flex-col justify-center items-center bg-gradient-to-b from-emerald-800  to-teal-950'>
         <CardLayout>
           <h1 className='text-6xl antialiased font-semibold'>{data?.location.name}</h1>
           <h2 className='text-lg antialiased font-semibold'>{data?.location.country}</h2>
           <img src={data?.current.condition.icon} alt={data?.current.condition.text} className='w-28 align-center' />
           <h3 className='text-6xl antialiased font-semibold'>{data?.current.temp_c}</h3>
-          <div className=' flex px-4 py-5 flex-row justify-center items-center w-full grid-cols-5 bg bg-contain m-10'>
+          <div className=' flex px-4 py-5 flex-row items-center w-full justify-between bg bg-contain overflow-x-auto'>
             {data?.forecast.forecastday.map((day) => (<CardDay day={day}/>))}
           </div>
             <div className='flex flex-row'>
@@ -185,6 +186,7 @@ export const Weather5days = () => {
               <Button onClick={fetchData}>Buscar</Button>
             </div>
             <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out text-indigo-100 bg-green-600 shadow-lg hover:bg-orange-300 hover:bg-opacity-80 hover:text-yellow-700 hover:shadow-lg hover:scale-90 ' onClick={() => navigate('/')} />
+            <Logout>Sing out</Logout>
         </CardLayout>
       </div>
     )

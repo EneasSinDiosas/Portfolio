@@ -10,7 +10,7 @@ export const Contactme = () => {
     const navigate = useNavigate();
     
     return(
-        <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-600 to-teal-950">
+        <div className="w-screen h-screen items-center flex flex-col  bg-gradient-to-b from-emerald-800  to-teal-950">
            <CardLayout>
             <h1 className="text-green-200">Contact me </h1>
                 <div>
