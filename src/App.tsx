@@ -4,6 +4,7 @@ import linkImageProfile from './assets/images/profilePhoto.jpg'
 import linkedInLight from './assets/images/linkedinLightMode.svg';
 import githubLight from './assets/images/githubLightMode.svg';
 import { NavButton } from './components/atoms/Button/NavButton.component.tsx';
+import { ButtonTheme } from './components/atoms/Button/ButtonTheme.component.tsx';
 //colorMode === 'light' ?  :
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <NavButton text='Weather' className='hover:scale-95' onClick={() => navigate('/weather5days')} />
           <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={linkedInLight} />
           <Abutton href="https://github.com/EneasSinDiosas" src={githubLight} />
+        <ButtonTheme>light/dark</ButtonTheme>
       </nav>
       <div className='w-5/6 flex flex-col m-4 p-2  '>
       <div className="grid grid-cols-3 m-4">
