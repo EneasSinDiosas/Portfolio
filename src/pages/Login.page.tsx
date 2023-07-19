@@ -65,7 +65,7 @@ export const Login = () => {
   return (
     <div className='w-screen h-screen items-center flex flex-col bg-gradient-to-b from-lime-100 to-green-200 dark:bg-gradient-to-b dark:from-emerald-800  dark:to-teal-950'>
       <CardLayout>
-      <h1 className='text-2xl font-extrabold tracking-widest text-center text-green-200 font-serif'>Sign in</h1>
+      <h1 className='text-2xl font-extrabold tracking-widest text-center text-teal-700 dark:text-green-200 font-serif'>Sign in</h1>
           <Input type="email" name='email' value={formData.email} onChange={onChange}>Correo</Input>
           <Input type="password" name='password' value={formData.password} onChange={onChange}>Password</Input>
           <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
