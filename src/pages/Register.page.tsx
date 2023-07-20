@@ -6,6 +6,7 @@ import { NavButton } from '../components/atoms/Button/NavButton.component';
 import { CardLayout } from '../components/atoms/CardWeather/CardLayout.component';
 import { FormEvent } from 'react';
 import { User } from './Login.page';
+import { HomeButton } from '../components/atoms/Button/HomeButton.component';
 
 
 export interface RegisterForm {
@@ -58,7 +59,7 @@ export const Register = () => {
           <NavButton text='Login' className='text-cyan-600 font-semibold hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 hover:underline' onClick={() => navigate('/login')}></NavButton>
         </div>
         <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
-          <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out bg-green-600 shadow-lg hover:bg-emerald-700 hover:shadow-lg text-indigo-100 hover:scale-90' onClick={() => navigate('/')} />
+          <HomeButton/>
         </div>
       </CardLayout>
     </div>

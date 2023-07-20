@@ -5,9 +5,8 @@ import { CardLayout } from '../components/atoms/CardWeather/CardLayout.component
 import { CardDay } from '../components/atoms/CardWeather/CardDay.component';
 import { Input } from '../components/atoms/Input/Input.component';
 import { Button } from '../components/atoms/Button/Button.component';
-import { useNavigate } from 'react-router-dom';
-import { NavButton } from '../components/atoms/Button/NavButton.component';
 import { Logout } from '../components/atoms/Button/Logout.component';
+import { HomeButton } from '../components/atoms/Button/HomeButton.component';
 
 
 export interface Weather {
@@ -169,7 +168,6 @@ export const Weather5days = () => {
   
     const [location, setLocation] = useState<string>('Cáceres')
     const {data, fetchData} = useFetch<Weather>({url: `https://api.weatherapi.com/v1/forecast.json?key=d2a0aa31e609406ca8382121231307&q=${location}&days=5&aqi=no&alerts=no&lang=es`})
-    const navigate = useNavigate();
   
     return (
       <div className='w-screen h-screen overflow-y-auto items-center justify-center flex flex-col bg-gradient-to-b from-lime-100 to-green-200 dark:bg-gradient-to-b dark:from-emerald-800  dark:to-teal-950'>
@@ -186,7 +184,7 @@ export const Weather5days = () => {
               <Button onClick={fetchData}>Buscar</Button>
             </div>
             <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
-              <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out bg-green-600 shadow-lg hover:bg-emerald-700 hover:shadow-lg text-indigo-100 hover:scale-90' onClick={() => navigate('/')} /> 
+              <HomeButton/>
               <Logout>Sing out</Logout>
             </div>
             

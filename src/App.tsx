@@ -9,8 +9,9 @@ import { NavButton } from './components/atoms/Button/NavButton.component.tsx';
 import { ButtonTheme } from './components/atoms/Button/ButtonTheme.component.tsx';
 import { AppContext } from './context/App.context.tsx';
 import { useContext } from 'react';
+import { WeatherButton } from './components/atoms/Button/WeatherButton.component.tsx';
 //colorMode === 'light' ?  :
-
+/**/
 const App = () => {
   const {colorTheme} = useContext(AppContext);
 
@@ -18,23 +19,25 @@ const App = () => {
 
   return (
     <div className="w-screen h-screen overflow-y-auto items-center flex flex-col bg-gradient-to-b from-lime-100 to-green-200 dark:bg-gradient-to-b dark:from-emerald-800  dark:to-teal-950" >
-      <nav className="w-screen h-fit text-teal-700 text-xl p-3 flex flex-row justify-between bg-green-300 bg-opacity-20 content-center dark:text-green-200">
-        <div className='justify-start flex flex-row items-center'>
-          <NavButton text='Login' className='hover:scale-95' onClick={() => navigate('/login')} />
-          <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />
-          <NavButton text='Contact me' className='hover:scale-95' onClick={() => navigate('/contactme')} />
-          <NavButton text='Weather' className='hover:scale-95' onClick={() => navigate('/weather5days')} />
-        </div>
-        <div className='justify-end flex flex-row items-center'>
+      <nav className="w-screen h-30 text-teal-700 text-base font-semibold p-3 flex flex-row justify-between bg-green-300 bg-opacity-20 content-center dark:text-green-200">
+      <div className='justify-start flex flex-row items-center h-30'>
+        <NavButton text='Login' className='hover:scale-95' onClick={() => navigate('/login')}></NavButton>
+        <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />
+        <NavButton text='Contact me' className='hover:scale-95' onClick={() => navigate('/contactme')} />
+        <WeatherButton className='hover:scale-95'/>
+      </div>
+        <div className='justify-end flex flex-row items-center h-30'>
           <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={colorTheme === 'dark' ? linkedIndark : linkedInLight} />
           <Abutton href="https://github.com/EneasSinDiosas" src={colorTheme === 'dark' ? githubDark : githubLight} />
-          <ButtonTheme>light/dark</ButtonTheme>
+          <ButtonTheme/>
         </div>
          
       </nav>
       <div className='w-5/6 flex flex-col m-4 p-2  '>
-      <div className="grid grid-cols-3 m-4">
-        <header className=" w-5/6 m-2 grid grid-cols-3 px-5 py-3 col-span-2">
+      <div className="flex flex-col
+                      md:grid md:grid-cols-3 md:m-4">
+        <header className=" w-5/6 m-2 px-5 py-3
+                            md:grid md:grid-cols-3 md:col-span-2">
           <img src={linkImageProfile} alt="profilePhoto" className="rounded-2xl mr-6 my-1.5 shadow-lg content-start col-start-1 col-end-1"></img>
           <h1 className="text-teal-700 text-3xl p-1.5 pt-8 font-semibold col-start-2 col-end-3 content-center text-center subpixel-antialiased tracking-wider dark:text-green-200">
             María Garzo Pulido
