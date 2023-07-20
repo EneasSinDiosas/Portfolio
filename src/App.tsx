@@ -41,7 +41,7 @@ const App = () => {
             <figcaption className="italic text-xl mt-3 font-normal dark:text-emerald-100">Desarrollo FullStack</figcaption>
           </h1>
         </header>
-        <main className="bg-green-300 bg-opacity-30 w-5/6 shadow-lg rounded-lg flex px-6 py-4 col-start-3 col-end-3 flex-col dark:bg-emerald-900 dark:shadow-2xl">
+        <main className="bg-green-300 bg-opacity-30 w-5/6 shadow-lg rounded-lg flex px-6 py-4 col-start-3 col-end-3 flex-col dark:bg-emerald-900 dark:shadow-3xl">
           <h1 className="text-emerald-700 text-lg font-bold dark:text-green-200">About me</h1>
           <p className="text-teal-700 pt-1.5 dark:text-emerald-100 indent-3">Estudié Filología hispánica, pero mi interés siempre ha estado enfocado en el ámbito de la programación.
             Durante la carrera estudié humanidades digitales y ahora me estoy especializando en desarrollo de páginas web con bases de datos relacionales. Soy una persona trabajadora, creativa y proactiva. Ambiciosa, entusiasta en seguir creciendo y evolucionando en la profesión, sobre todo en desarrollar constantemente nuevas habilidades y capacidades.</p>
