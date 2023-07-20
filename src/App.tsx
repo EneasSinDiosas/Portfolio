@@ -19,13 +19,13 @@ const App = () => {
   return (
     <div className="w-screen h-screen overflow-y-auto items-center flex flex-col bg-gradient-to-b from-lime-100 to-green-200 dark:bg-gradient-to-b dark:from-emerald-800  dark:to-teal-950" >
       <nav className="w-screen h-fit text-teal-700 text-xl p-3 flex flex-row justify-between bg-green-300 bg-opacity-20 content-center dark:text-green-200">
-        <div className='justify-start flex flex-row'>
+        <div className='justify-start flex flex-row items-center'>
           <NavButton text='Login' className='hover:scale-95' onClick={() => navigate('/login')} />
           <NavButton text='Registro' className='hover:scale-95' onClick={() => navigate('/register')} />
           <NavButton text='Contact me' className='hover:scale-95' onClick={() => navigate('/contactme')} />
           <NavButton text='Weather' className='hover:scale-95' onClick={() => navigate('/weather5days')} />
         </div>
-        <div className='justify-end flex flex-row'>
+        <div className='justify-end flex flex-row items-center'>
           <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={colorTheme === 'dark' ? linkedIndark : linkedInLight} />
           <Abutton href="https://github.com/EneasSinDiosas" src={colorTheme === 'dark' ? githubDark : githubLight} />
           <ButtonTheme>light/dark</ButtonTheme>

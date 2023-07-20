@@ -15,9 +15,9 @@ export const Input: FC<InputProps> = ({text, value, children, onChange, type, na
         <>
         <div className="mt-3 ml-3">
             <div>
-                <label className='p-3 font-mono text-basic font-semibold tracking-wide text-start text-green-200'>{text || children}</label><br></br>
+                <label className='p-3 text-basic font-semibold tracking-wide text-start text-teal-700 dark:text-green-200'>{text || children}</label><br></br>
             </div>
-            <div className="text-center">
+            <div className="text-center font-thin font-mono shadow-sm">
                 <input type={type} onChange={onChange} name={name} value={value}/>
             </div>
         </div>

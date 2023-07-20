@@ -10,9 +10,9 @@ interface TextareaProps {
 
 export const Textarea: FC<TextareaProps> = ({text, id, children}) => {
     return (
-        <>
-        <label className="p-3 font-mono text-basic font-semibold tracking-wide text-start text-stone-900 ml-3">{text || children}</label>
-        <textarea name={text} id={id} className="p-3 w-9/12 border-2 rounded outline-1 font-mono text-basic font-semibold tracking-wide text-start text-stone-900 shadow-md ml-3 mb-2"></textarea>
-        </>
+        <div className=" flex flex-col mt-3 ml-3 justify-center">
+        <label className="p-3 text-basic font-semibold tracking-wide text-start text-teal-700 dark:text-green-200">{text || children}</label>
+        <textarea name={text} id={id} className="p-3 w-11/12 border-2 rounded outline-1 font-mono text-basic font-semibold tracking-wide text-start text-stone-900 shadow-md ml-3 mb-2"></textarea>
+        </div>
     )
 }

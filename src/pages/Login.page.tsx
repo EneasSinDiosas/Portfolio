@@ -65,18 +65,18 @@ export const Login = () => {
   return (
     <div className='w-screen h-screen overflow-y-auto items-center justify-center flex flex-col bg-gradient-to-b from-lime-100 to-green-200 dark:bg-gradient-to-b dark:from-emerald-800  dark:to-teal-950'>
       <CardLayout>
-      <h1 className='text-2xl font-extrabold tracking-widest text-center text-teal-700 dark:text-green-200 font-serif'>Sign in</h1>
+      <h1 className='text-2xl font-extrabold tracking-widest text-center font-serif text-teal-800 dark:text-green-200 '>Sign in</h1>
           <Input type="email" name='email' value={formData.email} onChange={onChange}>Correo</Input>
           <Input type="password" name='password' value={formData.password} onChange={onChange}>Password</Input>
           <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
             <Button text='LogIn' onClick={onSubmit}></Button>
           </div>
           <div>
-            <p className='text-green-200'>¿Aún no está registrado?</p>
-            <NavButton text='Regístrese aquí' className='text-teal-300 hover:text-green-200 hover:underline' onClick={() => navigate('/register')}></NavButton>
+            <p className='text-teal-800 dark:text-green-200'>¿Aún no está registrado?</p>
+            <NavButton text='Regístrese aquí' className='text-cyan-600 font-semibold hover:underline hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 ' onClick={() => navigate('/register')}></NavButton>
           </div>
           <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
-          <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out bg-green-600 shadow-lg hover:bg-emerald-700 hover:shadow-lg text-indigo-100' onClick={() => navigate('/')} /> 
+          <NavButton text='Volver' className='py-2 px-4 rounded font-semibold transition duration-150 ease-in-out bg-green-600 shadow-lg hover:bg-emerald-700 hover:shadow-lg text-indigo-100 hover:scale-90' onClick={() => navigate('/')} /> 
           </div>
       </CardLayout>
     </div>
