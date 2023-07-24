@@ -56,7 +56,7 @@ export const Register = () => {
         </div>
         <div>
           <p className='text-teal-800 dark:text-green-200'>¿Ya está registrado?</p>
-          <NavButton text='Login' className='text-cyan-600 font-semibold hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 hover:underline' onClick={() => navigate('/login')}></NavButton>
+          <NavButton text='Sign in' className='text-cyan-600 font-semibold hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 hover:underline' onClick={() => navigate('/login')}></NavButton>
         </div>
         <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
           <HomeButton/>

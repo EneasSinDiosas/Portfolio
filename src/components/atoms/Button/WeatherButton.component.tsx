@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { LiaCloudSunRainSolid } from "react-icons/lia";
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 import { useNavigate } from 'react-router-dom';
 
 interface WeatherButtonProps{
@@ -12,7 +12,7 @@ export const WeatherButton: FC<WeatherButtonProps> = ({className}) =>{
     return (
         <div className="mx-3 my-3">
             <button onClick={() => navigate('/weather5days')} className={className}>
-                <LiaCloudSunRainSolid className='h-6 w-6'/>
+                <ThermostatIcon fontSize="medium" />
             </button>
         </div>
     )

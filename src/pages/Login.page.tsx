@@ -75,7 +75,7 @@ export const Login = () => {
           </div>
           <div>
             <p className='text-teal-800 dark:text-green-200'>¿Aún no está registrado?</p>
-            <NavButton text='Regístrese aquí' className='text-cyan-600 font-semibold hover:underline hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 ' onClick={() => navigate('/register')}></NavButton>
+            <NavButton text='Sign up' className='text-cyan-600 font-semibold hover:underline hover:text-emerald-700 dark:text-teal-300 dark:hover:text-green-200 ' onClick={() => navigate('/register')}></NavButton>
           </div>
           <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
           <WeatherButton className='py-2 px-2 rounded font-semibold transition duration-150 ease-in-out bg-green-600 shadow-lg hover:bg-emerald-700 hover:shadow-lg text-indigo-100 hover:scale-90'/>

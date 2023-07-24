@@ -6,8 +6,7 @@ interface InputProps{
     value?: string,
     children?: string,
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
-
-    name?: string
+    name?: string,
 }
 
 export const Input: FC<InputProps> = ({text, value, children, onChange, type, name}) =>{
@@ -18,7 +17,7 @@ export const Input: FC<InputProps> = ({text, value, children, onChange, type, na
                 <label className='p-3 text-basic font-semibold tracking-wide text-start text-teal-700 dark:text-green-200'>{text || children}</label><br></br>
             </div>
             <div className="text-center font-thin font-mono shadow-sm">
-                <input type={type} onChange={onChange} name={name} value={value}/>
+                <input type={type} onChange={onChange} name={name} value={value} required/>
             </div>
         </div>
         </>

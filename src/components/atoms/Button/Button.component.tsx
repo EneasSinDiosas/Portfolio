@@ -5,9 +5,10 @@ interface ButtonProps{
     children?: ReactNode,
     onClick?: () => void,
     variant?: 'filled'|'outlined',
+    type?: 'submit' | 'button' | 'reset',
 }
     // al igualar una de las opciones esta se crea una opción por defecto, en este caso la opción por defecto es variant=filled.
-export const Button: FC<ButtonProps> = ({text, variant = 'filled', children, onClick}) =>{
+export const Button: FC<ButtonProps> = ({text, variant = 'filled', children, onClick, type = 'button'}) =>{
     let style = 'py-2 px-4 rounded font-semibold transition duration-150 ease-in-out '
     if(variant === 'filled'){
         style = `${style}  bg-green-600 shadow-lg hover:bg-teal-800 hover:shadow-lg text-indigo-100 hover:scale-90`
@@ -17,7 +18,7 @@ export const Button: FC<ButtonProps> = ({text, variant = 'filled', children, onC
 
     return (
         <div className="mx-3 my-3">
-            <button className={style} onClick={onClick}>{text || children}</button>
+            <button type={type} className={style} onClick={onClick}>{text || children}</button>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { FC, ReactNode, useContext } from 'react';
 import { AppContext } from '../../../context/App.context';
 import { useNavigate } from 'react-router-dom';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 interface LogoutProps{
     text?: string,
@@ -22,7 +23,7 @@ export interface User {
 }
 
 
-export const Logout: FC<LogoutProps> = ({text, children}) =>{
+export const Logout: FC<LogoutProps> = () =>{
     let style = 'py-2 px-4 rounded font-semibold transition duration-150 ease-in-out bg-violet-600 shadow-lg hover:bg-indigo-600 hover:shadow-lg text-indigo-100 hover:scale-90'
     const {setUser, setToken} = useContext(AppContext);
     const navigate = useNavigate();
@@ -36,7 +37,9 @@ export const Logout: FC<LogoutProps> = ({text, children}) =>{
       }
     return (
         <div className="mx-3 my-3">
-            <button className={style} onClick={onClick}>{text || children}</button>
+            <button className={style} onClick={onClick}>
+                <LogoutIcon fontSize="medium"/>
+            </button>
         </div>
     )
 }

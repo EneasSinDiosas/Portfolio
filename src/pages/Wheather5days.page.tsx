@@ -7,6 +7,7 @@ import { Input } from '../components/atoms/Input/Input.component';
 import { Button } from '../components/atoms/Button/Button.component';
 import { Logout } from '../components/atoms/Button/Logout.component';
 import { HomeButton } from '../components/atoms/Button/HomeButton.component';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 export interface Weather {
@@ -179,9 +180,11 @@ export const Weather5days = () => {
           <div className=' flex px-4 py-5 flex-row items-center w-full justify-between bg bg-contain overflow-x-auto'>
             {data?.forecast.forecastday.map((day) => (<CardDay day={day}/>))}
           </div>
-            <div className='flex flex-row justify-between p-1.5 items-center'>
+            <div className='flex flex-row'>
               <Input value={location} onChange={(e) => setLocation(e.target.value)}>Ciudad y país</Input>
-              <Button onClick={fetchData}>Buscar</Button>
+              <Button onClick={fetchData}>
+                  <SearchIcon/>
+              </Button>
             </div>
             <div className='flex flex-row w-full mt-3 gap-2 justify-end items-end'>
               <HomeButton/>

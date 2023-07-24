@@ -11,25 +11,29 @@
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
-    height: 4px;
+    width: 4px;
+    height: 6px;
+    overflow-y: hidden;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     background: transparent;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 2px;
+    overflow-y: hidden;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(19 78 73);
-    border-radius: 10px;
+    background: rgb(35, 115, 98);
+    border-radius: 20px;
     width: 2px;
+    overflow-y: hidden;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(6 78 59);
+    background: rgb(44, 149, 126);
+    overflow-y: hidden;
 }

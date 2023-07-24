@@ -1,6 +1,8 @@
 import { FC, ReactNode } from "react"
 import { useNavigate } from 'react-router-dom';
-import { MdAssignmentInd } from "react-icons/md";
+import LogoutIcon from '@mui/icons-material/Logout';
+
+
 interface ButtonLoginProps{
 
     children?: ReactNode,
@@ -14,7 +16,7 @@ export const ButtonLogin: FC<ButtonLoginProps> = () =>{
         
         <div className='justify-start flex flex-row items-center h-60'>
             <button onClick={() => navigate('/')} className='hover:scale-95 lg:w-12 lg:h-12'>
-                <MdAssignmentInd></MdAssignmentInd>
+                <LogoutIcon fontSize="medium"/>
             </button>
         </div>
             
