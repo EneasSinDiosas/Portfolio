@@ -4,14 +4,11 @@ import { Square } from '../components/atoms/Square/Square.component';
 import { Patterns } from '../components/atoms/Square/Patterns.component';
 import { HomeButton } from '../components/atoms/Button/HomeButton.component';
 
-/*interface chooseSquareProp{
-    square?: int,
-}*/
 let initialValue = ['','','','','','','','',''];
 
 export const TikTakToe = () => {
     const [board, setBoard] = useState(initialValue)
-    const [player, setPlayer] = useState('O')
+    const [player, setPlayer] = useState('X')
     const [results, setResults] = useState({winner: 'none' , state: 'none'})
     
     useEffect(() => {
@@ -25,7 +22,7 @@ export const TikTakToe = () => {
     }, [board])
     
     useEffect(() => {
-        if (results.state != 'none'){
+        if (results.state !== 'none'){
             alert(`Game finished! Winner player: ${results.winner}`)
         }
         restartGame();
@@ -53,7 +50,7 @@ export const TikTakToe = () => {
             if(player1 === ''){return}
             let foundWinnerPattern = true;
             currentPattern.forEach((i) =>{
-                if(board[i] != player1){
+                if(board[i] !== player1){
                     foundWinnerPattern = false;
                 }
             })
