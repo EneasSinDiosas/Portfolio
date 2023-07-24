@@ -47,11 +47,15 @@ const App = () => {
             <figcaption className="italic text-xl mt-3 font-normal dark:text-emerald-100">Desarrollo FullStack</figcaption>
           </h1>
         </header>
-        <main className="bg-green-600 bg-opacity-5 w-5/6 shadow-lg rounded-lg flex px-6 py-4 col-start-3 col-end-3 flex-col dark:bg-emerald-900 dark:shadow-3xl">
-          <h1 className="text-emerald-700 text-lg font-bold dark:text-green-200">About me</h1>
-          <p className="text-teal-700 pt-1.5 dark:text-emerald-100 indent-3">Estudié Filología hispánica, pero mi interés siempre ha estado enfocado en el ámbito de la programación.
-            Durante la carrera estudié humanidades digitales y ahora me estoy especializando en desarrollo de páginas web con bases de datos relacionales. Soy una persona trabajadora, creativa y proactiva. Ambiciosa, entusiasta en seguir creciendo y evolucionando en la profesión, sobre todo en desarrollar constantemente nuevas habilidades y capacidades.</p>
-        </main>
+          <main className="bg-green-600 bg-opacity-5 w-5/6 shadow-lg rounded-lg flex px-6 py-4 md:col-start-3 md:col-end-3 flex-col dark:bg-emerald-900 dark:shadow-3xl">
+            <h1 className="text-emerald-700 text-lg font-bold dark:text-green-200">About me</h1>
+            <p className="text-teal-700 pt-1.5 dark:text-emerald-100 indent-3">Estudié Filología hispánica, pero mi interés siempre ha estado enfocado en el ámbito de la programación.
+              Durante la carrera estudié humanidades digitales y ahora me estoy especializando en desarrollo de páginas web con bases de datos relacionales. Soy una persona trabajadora, creativa y proactiva. Ambiciosa, entusiasta en seguir creciendo y evolucionando en la profesión, sobre todo en desarrollar constantemente nuevas habilidades y capacidades.</p>
+          </main>
+      </div>
+      <div className='flex flex-col items-center justify-center my-6 md:my-3'>
+            <h1 className='text-emerald-700 text-lg font-bold dark:text-green-200'>Mis proyectos</h1>
+            <NavButton className='hover:scale-95 italic font-bold text-emerald-700 hover:text-teal-600 hover:underline dark:text-green-200 dark:hover:text-lime-200 dark:hover:underline' onClick={() => navigate('/TikTakToe')}><h1>Tres en raya</h1></NavButton>
       </div>
       <footer className="my-10 p-10 items-center text-center ">
         <h1 className="text-teal-700 dark:text-green-200">Contact me </h1>
