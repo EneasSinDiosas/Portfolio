@@ -30,7 +30,7 @@ const App = () => {
         <WeatherButton className='hover:scale-95'/>
       </div>
         <div className='justify-end flex flex-row items-center h-30'>
-          <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={colorTheme === 'dark' ? linkedIndark : linkedInLight} />
+          <Abutton href="www.linkedin.com/in/maria-garzo-pulido" src={colorTheme === 'dark' ? linkedIndark : linkedInLight} />
           <Abutton href="https://github.com/EneasSinDiosas" src={colorTheme === 'dark' ? githubDark : githubLight} />
           <ButtonTheme/>
         </div>
@@ -60,7 +60,7 @@ const App = () => {
       <footer className="my-10 p-10 items-center text-center ">
         <h1 className="text-teal-700 dark:text-green-200">Contact me </h1>
         <div className="flex flex-row mt-1.5 items-center justify-center">
-          <Abutton href="https://www.linkedin.com/in/maria-garzo-6a8831260/" src={colorTheme === 'dark' ? linkedIndark : linkedInLight}/>
+          <Abutton href="www.linkedin.com/in/maria-garzo-pulido" src={colorTheme === 'dark' ? linkedIndark : linkedInLight}/>
           <Abutton href="https://github.com/EneasSinDiosas" src={colorTheme === 'dark' ? githubDark : githubLight} />
         </div>
       </footer>
